@@ -1,15 +1,11 @@
-The code contained includes a test harness as well as the oauth libraries for oauth login dance and Linkein API requests.  Oauth login is handled with an embedded webBrowser which is shown modally for the user to login.  Upon login completion, dialog will be closed and the token and verifier will be available from the dialogs property.
+This code allows you to implement OAuth for the Tumblr API in a .NET desktop application, using the WebBrowser control available in .NET. It's based on David Quail's LinkedIn example: https://github.com/dquail/LinkedinOauth
 
-To use the code, simply Add your Linkedin consumer secret and Consumer key to the OauthLinkedIn.cs file:
-view source
-print?
-1	private string _consumerKey = "ENTER_YOUR_CONSUMER_KEY";
-2	private string _consumerSecret = "ENTER_YOUR_CONSUMER_SCRET";
+Example usage:
+	OAuthTumblr oauth = new OAuthTumblr("CONSUMER_KEY", "CONSUMER_SECRET");
+	string requestToken = oauth.getRequestToken();
+	string verifier = oauth.authorizeToken(); // display WebBrowser
+	if (verifier == null) throw new Exception("Authentication failed or cancelled by user");
+	string accessToken = oauth.getAccessToken();
+	string accessTokenSecret = oauth.TokenSecret;
 
-Then you can make api calls following a few steps:
-
-1	OAuthLinkedIn _oauth = new OAuthLinkedIn();
-2	String requestToken = _oauth.getRequestToken();
-3	_oauth.authorizeToken();
-4	String accessToken = _oauth.getAccessToken();</div>
-
+The call to getAccessToken() also fills in the TokenSecret property, so make sure to call them in that order. Tumblr tokens can be re-used, so you can store them somewhere - but remember that anyone with the access token & secret has all the permissions of the app for that user, so be careful!
