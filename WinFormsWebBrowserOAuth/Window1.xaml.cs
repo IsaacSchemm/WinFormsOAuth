@@ -18,7 +18,7 @@ namespace WebBrowserOAuth
     /// </summary>
     public partial class Window1 : Window
     {
-        private OAuthLinkedIn _oauth = new OAuthLinkedIn();
+        private OAuthLinkedIn _oauth = new OAuthLinkedIn("CONSUMER_KEY", "CONSUMER_SECRET");
 
         public Window1()
         {
