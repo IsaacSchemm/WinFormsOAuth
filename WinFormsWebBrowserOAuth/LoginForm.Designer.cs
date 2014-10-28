@@ -39,7 +39,7 @@ namespace WebBrowserOAuth
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.browser.Location = new System.Drawing.Point(0, 32);
-			this.browser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.browser.Margin = new System.Windows.Forms.Padding(4);
 			this.browser.MinimumSize = new System.Drawing.Size(27, 25);
 			this.browser.Name = "browser";
 			this.browser.Size = new System.Drawing.Size(622, 561);
@@ -53,7 +53,7 @@ namespace WebBrowserOAuth
 			this.addressTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.addressTextBox.Location = new System.Drawing.Point(9, 2);
-			this.addressTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.addressTextBox.Margin = new System.Windows.Forms.Padding(4);
 			this.addressTextBox.Name = "addressTextBox";
 			this.addressTextBox.Size = new System.Drawing.Size(589, 22);
 			this.addressTextBox.TabIndex = 1;
@@ -68,7 +68,7 @@ namespace WebBrowserOAuth
 			this.Controls.Add(this.addressTextBox);
 			this.Controls.Add(this.browser);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "LoginForm";
