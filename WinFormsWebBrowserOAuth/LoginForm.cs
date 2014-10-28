@@ -12,7 +12,7 @@ namespace WebBrowserOAuth
 {
     public partial class LoginForm : Form
     {
-        private OAuthLinkedIn _oauth;
+        private oAuthBase _oauth;
         private String _token;
         private String _verifier;
         private String _tokenSecret;
@@ -41,7 +41,7 @@ namespace WebBrowserOAuth
             }
         }
 
-        public LoginForm(OAuthLinkedIn o)
+        public LoginForm(oAuthBase o)
         {
             _oauth = o;
             _token = null;

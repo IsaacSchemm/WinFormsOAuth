@@ -29,11 +29,11 @@ namespace WebBrowserOAuth
         private string _tokenSecret = "";
         
         #region PublicPropertiies
-        public string ConsumerKey { get { return _consumerKey; } set { _consumerKey = value; } }
-        public string ConsumerSecret { get { return _consumerSecret;} set { _consumerSecret = value; } }
-        public string Token { get { return _token; } set { _token = value; } }
-        public string TokenSecret { get { return _tokenSecret; } set { _tokenSecret = value; } }
-        public string CALLBACK_URL { get { return CALLBACK; } }
+        public override string ConsumerKey { get { return _consumerKey; } set { _consumerKey = value; } }
+		public override string ConsumerSecret { get { return _consumerSecret; } set { _consumerSecret = value; } }
+		public override string Token { get { return _token; } set { _token = value; } }
+		public override string TokenSecret { get { return _tokenSecret; } set { _tokenSecret = value; } }
+		public override string CALLBACK_URL { get { return CALLBACK; } }
         #endregion
 
         /// <summary>
@@ -111,7 +111,7 @@ namespace WebBrowserOAuth
         /// Get the link to Linked In's authorization page for this application.
         /// </summary>
         /// <returns>The url with a valid request token, or a null string.</returns>
-        public string AuthorizationLink
+        public override string AuthorizationLink
         {
             get { return AUTHORIZE + "?oauth_token=" + this.Token; }
         }
