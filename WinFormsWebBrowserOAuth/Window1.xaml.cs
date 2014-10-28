@@ -11,7 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Forms;
-namespace Attassa
+namespace WebBrowserOAuth
 {
     /// <summary>
     /// Interaction logic for Window1.xaml

@@ -8,7 +8,7 @@ using System.Collections.Specialized;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
 
-namespace Attassa
+namespace WebBrowserOAuth
 {
 
     public class OAuthLinkedIn : oAuthBase

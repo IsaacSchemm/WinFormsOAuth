@@ -1,4 +1,4 @@
-namespace Attassa
+namespace WebBrowserOAuth
 {
     partial class LoginForm
     {

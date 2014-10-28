@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using System.Web;
 using System.Collections.Specialized;
 
-namespace Attassa
+namespace WebBrowserOAuth
 {
     public partial class LoginForm : Form
     {

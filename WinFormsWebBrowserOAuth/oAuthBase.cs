@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Web;
 
-namespace Attassa
+namespace WebBrowserOAuth
 {
     public class oAuthBase
     {
