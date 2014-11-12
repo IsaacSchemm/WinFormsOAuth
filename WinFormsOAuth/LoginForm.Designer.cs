@@ -1,4 +1,4 @@
-namespace WinFormsWebBrowserOAuth
+namespace WinFormsOAuth
 {
     partial class LoginForm
     {

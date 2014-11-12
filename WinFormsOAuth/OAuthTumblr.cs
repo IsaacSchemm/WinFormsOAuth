@@ -7,9 +7,9 @@ using System.IO;
 using System.Collections.Specialized;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
-using WinFormsWebBrowserOAuth;
+using WinFormsOAuth;
 
-namespace WinFormsWebBrowserOAuth
+namespace WinFormsOAuth
 {
     public class OAuthTumblr : oAuthBase
     {

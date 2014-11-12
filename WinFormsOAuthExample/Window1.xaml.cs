@@ -11,7 +11,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Forms;
-namespace WinFormsWebBrowserOAuth
+using WinFormsOAuth;
+namespace WinFormsOAuthExample
 {
     /// <summary>
     /// Interaction logic for Window1.xaml

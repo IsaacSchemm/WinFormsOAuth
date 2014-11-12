@@ -8,7 +8,7 @@ using System.Collections.Specialized;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
 
-namespace WinFormsWebBrowserOAuth
+namespace WinFormsOAuth
 {
     public class OAuthLinkedIn : oAuthBase
     {

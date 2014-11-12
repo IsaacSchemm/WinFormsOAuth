@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using System.Web;
 using System.Collections.Specialized;
 
-namespace WinFormsWebBrowserOAuth
+namespace WinFormsOAuth
 {
     public partial class LoginForm : Form
     {

@@ -4,6 +4,8 @@ VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsOAuth", "WinFormsOAuth\WinFormsOAuth.csproj", "{D98E0824-0A4A-4105-8F76-1CAC1D91FFCE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsOAuthExample", "WinFormsOAuthExample\WinFormsOAuthExample.csproj", "{FD986C2B-9763-4F17-9C8A-690FFA546135}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -14,6 +16,10 @@ Global
 		{D98E0824-0A4A-4105-8F76-1CAC1D91FFCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D98E0824-0A4A-4105-8F76-1CAC1D91FFCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D98E0824-0A4A-4105-8F76-1CAC1D91FFCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD986C2B-9763-4F17-9C8A-690FFA546135}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD986C2B-9763-4F17-9C8A-690FFA546135}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD986C2B-9763-4F17-9C8A-690FFA546135}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD986C2B-9763-4F17-9C8A-690FFA546135}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
