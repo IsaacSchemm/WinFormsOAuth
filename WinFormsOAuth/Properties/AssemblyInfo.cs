@@ -7,12 +7,12 @@ using System.Windows;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("LinkedInOauth")]
+[assembly: AssemblyTitle("WinFormsOAuth")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Invisible Software")]
-[assembly: AssemblyProduct("LinkedInOauth")]
-[assembly: AssemblyCopyright("Copyright © Invisible Software 2009")]
+[assembly: AssemblyCompany("libertyernie")]
+[assembly: AssemblyProduct("WinFormsOAuth")]
+[assembly: AssemblyCopyright("Copyright © Invisible Software 2009, libertyernie 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
