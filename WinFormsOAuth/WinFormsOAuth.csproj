@@ -79,6 +79,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OAuthTwitter.cs" />
     <Compile Include="OAuthTumblr.cs" />
   </ItemGroup>
   <ItemGroup>

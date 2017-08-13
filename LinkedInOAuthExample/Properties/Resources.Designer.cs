@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WinFormsOAuthExample.Properties {
+namespace LinkedInOAuthExample.Properties {
     using System;
     
     

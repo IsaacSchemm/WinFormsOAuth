@@ -12,7 +12,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Forms;
 using WinFormsOAuth;
-namespace WinFormsOAuthExample
+namespace LinkedInOAuthExample
 {
     /// <summary>
     /// Interaction logic for Window1.xaml
