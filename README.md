@@ -5,6 +5,7 @@ https://github.com/IsaacSchemm/WinFormsOAuth
 This code allows you to implement OAuth for the Tumblr and Twitter APIs in a .NET desktop application, using the WebBrowser control available in .NET. It's based on David Quail's LinkedIn example: https://github.com/dquail/LinkedinOauth
 
 Example usage:
+
 	OAuthTumblr oauth = new OAuthTumblr("CONSUMER_KEY", "CONSUMER_SECRET");
 	string requestToken = oauth.getRequestToken();
 	string verifier = oauth.authorizeToken(); // display WebBrowser

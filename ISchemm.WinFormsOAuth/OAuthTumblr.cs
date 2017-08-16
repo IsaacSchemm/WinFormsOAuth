@@ -7,24 +7,23 @@ using System.IO;
 using System.Collections.Specialized;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
-using WinFormsOAuth;
 
-namespace WinFormsOAuth
+namespace ISchemm.WinFormsOAuth
 {
-    public class OAuthTwitter : oAuthBase
+    public class OAuthTumblr : oAuthBase
     {
         private string _consumerKey, _consumerSecret;
 
-		public OAuthTwitter(string consumerKey, string consumerSecret) {
+		public OAuthTumblr(string consumerKey, string consumerSecret) {
 			_consumerKey = consumerKey;
 			_consumerSecret = consumerSecret;
 		}
 
         public enum Method { GET, POST, PUT, DELETE };
 		public const string USER_AGENT = null;
-		public const string REQUEST_TOKEN = "https://api.twitter.com/oauth/request_token";
-		public const string AUTHORIZE = "https://api.twitter.com/oauth/authorize";
-		public const string ACCESS_TOKEN = "https://api.twitter.com/oauth/access_token";
+		public const string REQUEST_TOKEN = "http://www.tumblr.com/oauth/request_token";
+		public const string AUTHORIZE = "http://www.tumblr.com/oauth/authorize";
+		public const string ACCESS_TOKEN = "http://www.tumblr.com/oauth/access_token";
 
         public const string CALLBACK = "http://www.example.net";
 

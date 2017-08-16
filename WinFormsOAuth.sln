@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsOAuth", "WinFormsOAuth\WinFormsOAuth.csproj", "{D98E0824-0A4A-4105-8F76-1CAC1D91FFCE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsOAuth", "ISchemm.WinFormsOAuth\ISchemm.WinFormsOAuth.csproj", "{D98E0824-0A4A-4105-8F76-1CAC1D91FFCE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedInOAuthExample", "LinkedInOAuthExample\LinkedInOAuthExample.csproj", "{FD986C2B-9763-4F17-9C8A-690FFA546135}"
 EndProject

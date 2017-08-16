@@ -7,32 +7,31 @@ using System.IO;
 using System.Collections.Specialized;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
-using WinFormsOAuth;
 
-namespace WinFormsOAuth
+namespace ISchemm.WinFormsOAuth
 {
-    public class OAuthTumblr : oAuthBase
+    public class OAuthLinkedIn : oAuthBase
     {
-        private string _consumerKey, _consumerSecret;
+		private string _consumerKey, _consumerSecret;
 
-		public OAuthTumblr(string consumerKey, string consumerSecret) {
+		public OAuthLinkedIn(string consumerKey, string consumerSecret) {
 			_consumerKey = consumerKey;
 			_consumerSecret = consumerSecret;
 		}
 
         public enum Method { GET, POST, PUT, DELETE };
-		public const string USER_AGENT = null;
-		public const string REQUEST_TOKEN = "http://www.tumblr.com/oauth/request_token";
-		public const string AUTHORIZE = "http://www.tumblr.com/oauth/authorize";
-		public const string ACCESS_TOKEN = "http://www.tumblr.com/oauth/access_token";
-
-        public const string CALLBACK = "http://www.example.net";
+        public const string USER_AGENT = "Attassa";
+        public const string REQUEST_TOKEN = "https://api.linkedin.com/uas/oauth/requestToken";
+        public const string AUTHORIZE = "https://api.linkedin.com/uas/oauth/authorize";
+        public const string ACCESS_TOKEN = "https://api.linkedin.com/uas/oauth/accessToken";
+        /*Should replace the following URL callback to your own domain*/
+        public const string CALLBACK = "http://www.linkedin.com";
 
         private string _token = "";
         private string _tokenSecret = "";
         
-        #region PublicProperties
-		public override string ConsumerKey { get { return _consumerKey; } set { _consumerKey = value; } }
+        #region PublicPropertiies
+        public override string ConsumerKey { get { return _consumerKey; } set { _consumerKey = value; } }
 		public override string ConsumerSecret { get { return _consumerSecret; } set { _consumerSecret = value; } }
 		public override string Token { get { return _token; } set { _token = value; } }
 		public override string TokenSecret { get { return _tokenSecret; } set { _tokenSecret = value; } }
@@ -40,7 +39,7 @@ namespace WinFormsOAuth
         #endregion
 
         /// <summary>
-        /// Get the tumblr request token using the consumer key and secret.  Also initializes tokensecret
+        /// Get the linkedin request token using the consumer key and secret.  Also initializes tokensecret
         /// </summary>
         /// <returns>The request token.</returns>
         public String getRequestToken() {
@@ -111,10 +110,10 @@ namespace WinFormsOAuth
         }
 
         /// <summary>
-        /// Get the link to Tumblr's authorization page for this application.
+        /// Get the link to Linked In's authorization page for this application.
         /// </summary>
         /// <returns>The url with a valid request token, or a null string.</returns>
-		public override string AuthorizationLink
+        public override string AuthorizationLink
         {
             get { return AUTHORIZE + "?oauth_token=" + this.Token; }
         }
@@ -281,7 +280,7 @@ namespace WinFormsOAuth
             webRequest = System.Net.WebRequest.Create(url) as HttpWebRequest;
             webRequest.Method = method.ToString();
             webRequest.ServicePoint.Expect100Continue = false;
-            if (USER_AGENT != null) webRequest.UserAgent = USER_AGENT;
+            webRequest.UserAgent  = USER_AGENT;
             webRequest.Timeout = 20000;
 
             if (method == Method.POST)

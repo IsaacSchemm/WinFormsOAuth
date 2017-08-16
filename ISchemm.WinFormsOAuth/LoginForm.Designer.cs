@@ -1,4 +1,4 @@
-namespace WinFormsOAuth
+namespace ISchemm.WinFormsOAuth
 {
     partial class LoginForm
     {

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Web;
 
-namespace WinFormsOAuth
+namespace ISchemm.WinFormsOAuth
 {
 	public abstract class oAuthBase
     {

@@ -90,7 +90,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WinFormsOAuth\WinFormsOAuth.csproj">
+    <ProjectReference Include="..\ISchemm.WinFormsOAuth\ISchemm.WinFormsOAuth.csproj">
       <Project>{d98e0824-0a4a-4105-8f76-1cac1d91ffce}</Project>
       <Name>WinFormsOAuth</Name>
     </ProjectReference>
