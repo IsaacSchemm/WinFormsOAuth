@@ -1,4 +1,6 @@
-# WinFormsOAuth
+# ISchemm.WinFormsOAuth
+
+[![NuGet](https://img.shields.io/nuget/v/ISchemm.WinFormsOAuth.svg)](https://www.nuget.org/packages/ISchemm.WinFormsOAuth)
 
 https://github.com/IsaacSchemm/WinFormsOAuth
 
