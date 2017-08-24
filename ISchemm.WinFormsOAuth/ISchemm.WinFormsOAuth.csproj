@@ -79,6 +79,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IECompatibility.cs" />
+    <Compile Include="OAuthFlickr.cs" />
     <Compile Include="OAuthTwitter.cs" />
     <Compile Include="OAuthTumblr.cs" />
   </ItemGroup>
