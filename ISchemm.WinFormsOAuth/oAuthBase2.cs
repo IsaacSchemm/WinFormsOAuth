@@ -10,36 +10,23 @@ using System.Text;
 
 namespace ISchemm.WinFormsOAuth
 {
-    public class OAuthLinkedIn : oAuthBase
+    public abstract partial class oAuthBase
     {
-		private string _consumerKey, _consumerSecret;
-
-		public OAuthLinkedIn(string consumerKey, string consumerSecret) {
-			_consumerKey = consumerKey;
-			_consumerSecret = consumerSecret;
+		public oAuthBase(string consumerKey, string consumerSecret) {
+			ConsumerKey = consumerKey;
+			ConsumerSecret = consumerSecret;
 		}
 
         public enum Method { GET, POST, PUT, DELETE };
-        public const string USER_AGENT = "Attassa";
-        public const string REQUEST_TOKEN = "https://api.linkedin.com/uas/oauth/requestToken";
-        public const string AUTHORIZE = "https://api.linkedin.com/uas/oauth/authorize";
-        public const string ACCESS_TOKEN = "https://api.linkedin.com/uas/oauth/accessToken";
+        public string USER_AGENT { get; set; } = null;
+        public abstract string REQUEST_TOKEN { get; }
+        public abstract string AUTHORIZE { get; }
+        public abstract string ACCESS_TOKEN { get; }
         /*Should replace the following URL callback to your own domain*/
-        public const string CALLBACK = "http://www.linkedin.com";
-
-        private string _token = "";
-        private string _tokenSecret = "";
-        
-        #region PublicPropertiies
-        public override string ConsumerKey { get { return _consumerKey; } set { _consumerKey = value; } }
-		public override string ConsumerSecret { get { return _consumerSecret; } set { _consumerSecret = value; } }
-		public override string Token { get { return _token; } set { _token = value; } }
-		public override string TokenSecret { get { return _tokenSecret; } set { _tokenSecret = value; } }
-		public override string CALLBACK_URL { get { return CALLBACK; } }
-        #endregion
+        public string CALLBACK { get; set; } = "http://www.example.net";
 
         /// <summary>
-        /// Get the linkedin request token using the consumer key and secret.  Also initializes tokensecret
+        /// Get the request token using the consumer key and secret.  Also initializes tokensecret
         /// </summary>
         /// <returns>The request token.</returns>
         public String getRequestToken() {
@@ -110,10 +97,10 @@ namespace ISchemm.WinFormsOAuth
         }
 
         /// <summary>
-        /// Get the link to Linked In's authorization page for this application.
+        /// Get the link to the authorization page for this application.
         /// </summary>
         /// <returns>The url with a valid request token, or a null string.</returns>
-        public override string AuthorizationLink
+        public string AuthorizationLink
         {
             get { return AUTHORIZE + "?oauth_token=" + this.Token; }
         }
@@ -206,63 +193,6 @@ namespace ISchemm.WinFormsOAuth
             return ret;
         }
 
-        /// <summary>
-        /// WebRequestWithPut
-        /// </summary>
-        /// <param name="method">WebRequestWithPut</param>
-        /// <param name="url"></param>
-        /// <param name="postData"></param>
-        /// <returns></returns>
-        public string APIWebRequest(string method, string url, string postData)
-        {
-            Uri uri = new Uri(url);
-            string nonce = this.GenerateNonce();
-            string timeStamp = this.GenerateTimeStamp();
-
-            string outUrl, querystring;
-
-            //Generate Signature
-            string sig = this.GenerateSignature(uri,
-                this.ConsumerKey,
-                this.ConsumerSecret,
-                this.Token,
-                this.TokenSecret,
-                method,
-                timeStamp,
-                nonce,
-                null,
-                out outUrl,
-                out querystring);
-
-            HttpWebRequest webRequest = null;
-
-            webRequest = System.Net.WebRequest.Create(url) as HttpWebRequest;
-            webRequest.Method = method;
-            webRequest.Credentials = CredentialCache.DefaultCredentials;
-            webRequest.AllowWriteStreamBuffering = true;
-
-            webRequest.PreAuthenticate = true;
-            webRequest.ServicePoint.Expect100Continue = false;
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3;
-
-            webRequest.Headers.Add("Authorization", "OAuth realm=\"http://api.linkedin.com/\",oauth_consumer_key=\"" + this.ConsumerKey + "\",oauth_token=\"" + this.Token + "\",oauth_signature_method=\"HMAC-SHA1\",oauth_signature=\"" + HttpUtility.UrlEncode(sig) + "\",oauth_timestamp=\"" + timeStamp + "\",oauth_nonce=\"" + nonce + "\",oauth_verifier=\"" + this.Verifier + "\", oauth_version=\"1.0\"");            
-
-            if (postData != null)
-            {
-                byte[] fileToSend = Encoding.UTF8.GetBytes(postData);
-                webRequest.ContentLength = fileToSend.Length;
-
-                Stream reqStream = webRequest.GetRequestStream();
-
-                reqStream.Write(fileToSend, 0, fileToSend.Length);
-                reqStream.Close();
-            }
-
-            string returned = WebResponseGet(webRequest);
-
-            return returned;
-        }
-
 
         /// <summary>
         /// Web Request Wrapper
@@ -280,7 +210,7 @@ namespace ISchemm.WinFormsOAuth
             webRequest = System.Net.WebRequest.Create(url) as HttpWebRequest;
             webRequest.Method = method.ToString();
             webRequest.ServicePoint.Expect100Continue = false;
-            webRequest.UserAgent  = USER_AGENT;
+            if (USER_AGENT != null) webRequest.UserAgent = USER_AGENT;
             webRequest.Timeout = 20000;
 
             if (method == Method.POST)

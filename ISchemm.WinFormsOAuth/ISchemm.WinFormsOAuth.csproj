@@ -80,9 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IECompatibility.cs" />
-    <Compile Include="OAuthFlickr.cs" />
-    <Compile Include="OAuthTwitter.cs" />
-    <Compile Include="OAuthTumblr.cs" />
+    <Compile Include="LinkedIn.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LoginForm.cs">
@@ -91,8 +89,11 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="oAuthBase.cs" />
-    <Compile Include="oAuthLinkedIn.cs" />
+    <Compile Include="oAuthBase1.cs" />
+    <Compile Include="oAuthBase2.cs" />
+    <Compile Include="OAuthFlickr.cs" />
+    <Compile Include="OAuthTumblr.cs" />
+    <Compile Include="OAuthTwitter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

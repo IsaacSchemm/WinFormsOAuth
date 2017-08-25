@@ -6,15 +6,12 @@ using System.Web;
 
 namespace ISchemm.WinFormsOAuth
 {
-	public abstract class oAuthBase
+	public abstract partial class oAuthBase
     {
-		public abstract string ConsumerKey { get; set; }
-		public abstract string ConsumerSecret { get; set; }
-		public abstract string Token { get; set; }
-		public abstract string TokenSecret { get; set; }
-		public abstract string CALLBACK_URL { get; }
-
-		public abstract string AuthorizationLink { get; }
+		public string ConsumerKey { get; set; }
+		public string ConsumerSecret { get; set; }
+		public string Token { get; set; }
+		public string TokenSecret { get; set; }
 
         /// <summary>
         /// Provides a predefined set of algorithms that are supported officially by the protocol

@@ -65,7 +65,7 @@ namespace ISchemm.WinFormsOAuth
 
         private void browser_Navigated(object sender, WebBrowserNavigatedEventArgs e)
         {
-            if (browser.Url.ToString().Contains(_oauth.CALLBACK_URL)) 
+            if (browser.Url.ToString().Contains(_oauth.CALLBACK)) 
             {
                 string queryParams = e.Url.Query;
                 if (queryParams.Length > 0)
