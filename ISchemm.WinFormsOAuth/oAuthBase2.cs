@@ -12,10 +12,10 @@ namespace ISchemm.WinFormsOAuth
 {
     public abstract partial class oAuthBase
     {
-		public oAuthBase(string consumerKey, string consumerSecret) {
-			ConsumerKey = consumerKey;
-			ConsumerSecret = consumerSecret;
-		}
+        public oAuthBase(string consumerKey, string consumerSecret) {
+            ConsumerKey = consumerKey;
+            ConsumerSecret = consumerSecret;
+        }
 
         public enum Method { GET, POST, PUT, DELETE };
         public string USER_AGENT { get; set; } = null;

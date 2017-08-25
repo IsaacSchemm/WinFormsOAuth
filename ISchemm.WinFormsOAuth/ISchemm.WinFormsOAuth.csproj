@@ -80,7 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IECompatibility.cs" />
-    <Compile Include="LinkedIn.cs" />
+    <Compile Include="OAuthLinkedIn.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LoginForm.cs">

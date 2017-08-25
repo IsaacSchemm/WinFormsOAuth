@@ -6,12 +6,12 @@ using System.Web;
 
 namespace ISchemm.WinFormsOAuth
 {
-	public abstract partial class oAuthBase
+    public abstract partial class oAuthBase
     {
-		public string ConsumerKey { get; set; }
-		public string ConsumerSecret { get; set; }
-		public string Token { get; set; }
-		public string TokenSecret { get; set; }
+        public string ConsumerKey { get; set; }
+        public string ConsumerSecret { get; set; }
+        public string Token { get; set; }
+        public string TokenSecret { get; set; }
 
         /// <summary>
         /// Provides a predefined set of algorithms that are supported officially by the protocol
@@ -305,7 +305,7 @@ namespace ISchemm.WinFormsOAuth
 
         /// <summary>
         /// Generates a signature using the HMAC-SHA1 algorithm
-        /// </summary>		
+        /// </summary>        
         /// <param name="url">The full url that needs to be signed including its non OAuth url parameters</param>
         /// <param name="consumerKey">The consumer key</param>
         /// <param name="consumerSecret">The consumer seceret</param>
@@ -320,7 +320,7 @@ namespace ISchemm.WinFormsOAuth
 
         /// <summary>
         /// Generates a signature using the specified signatureType 
-        /// </summary>		
+        /// </summary>        
         /// <param name="url">The full url that needs to be signed including its non OAuth url parameters</param>
         /// <param name="consumerKey">The consumer key</param>
         /// <param name="consumerSecret">The consumer seceret</param>
