@@ -14,8 +14,8 @@ namespace ISchemm.WinFormsOAuth
     {
         public OAuthTumblr(string consumerKey, string consumerSecret) : base(consumerKey, consumerSecret) { }
 
-        public override string REQUEST_TOKEN => "http://www.tumblr.com/oauth/request_token";
-        public override string AUTHORIZE => "http://www.tumblr.com/oauth/authorize";
-        public override string ACCESS_TOKEN => "http://www.tumblr.com/oauth/access_token";
+        public override string REQUEST_TOKEN => "https://www.tumblr.com/oauth/request_token";
+        public override string AUTHORIZE => "https://www.tumblr.com/oauth/authorize";
+        public override string ACCESS_TOKEN => "https://www.tumblr.com/oauth/access_token";
     }
 }
