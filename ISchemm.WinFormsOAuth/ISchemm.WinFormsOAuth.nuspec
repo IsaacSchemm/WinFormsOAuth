@@ -2,15 +2,15 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>ISchemm.WinFormsOAuth</id>
-    <version>1.1.1</version>
+    <version>1.1.2</version>
     <title>ISchemm.WinFormsOAuth</title>
     <authors>Isaac Schemm</authors>
     <owners>Isaac Schemm</owners>
     <projectUrl>https://github.com/IsaacSchemm/WinFormsOAuth</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Provides an embedded browser for OAuth login to LinkedIn, Flickr, Tumblr, and Twitter from Windows Forms applications.</description>
-    <releaseNotes>Fix Tumblr URLs; update to target .NET 4.0</releaseNotes>
-    <copyright>Copyright © 2009 Invisible Software, © 2014-2018 Isaac Schemm</copyright>
+    <releaseNotes>Bugfix for .NET 5</releaseNotes>
+    <copyright>Copyright © 2009 Invisible Software, © 2014-2020 Isaac Schemm</copyright>
     <tags>oauth winforms</tags>
   </metadata>
 </package>
