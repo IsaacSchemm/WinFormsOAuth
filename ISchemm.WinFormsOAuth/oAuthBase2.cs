@@ -248,26 +248,11 @@ namespace ISchemm.WinFormsOAuth
         /// <returns>The response data.</returns>
         public string WebResponseGet(HttpWebRequest webRequest)
         {
-            StreamReader responseReader = null;
-            string responseData = "";
-
-            try
-            {
-                responseReader = new StreamReader(webRequest.GetResponse().GetResponseStream());
-                responseData = responseReader.ReadToEnd();
+            using (var resp = webRequest.GetResponse())
+            using (var stream = resp.GetResponseStream())
+            using (var sr = new StreamReader(stream)) {
+                return sr.ReadToEnd();
             }
-            catch (Exception e)
-            {
-                throw e;
-            }
-            finally
-            {
-                webRequest.GetResponse().GetResponseStream().Close();
-                responseReader.Close();
-                responseReader = null;
-            }
-
-            return responseData;
         }
     }
 }
